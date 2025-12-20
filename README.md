@@ -87,6 +87,11 @@
 
 ## 五、运行
 
+```bash
+git clone https://github.com/mitochondriasam/c-in-s.git
+cd c-in-s
+```
+
 ### 1. 环境依赖
 
 ```bash
