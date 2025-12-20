@@ -1,0 +1,44 @@
+seed: 42
+
+iter: 
+  num_particles: 500
+  dt: 0.5
+  total_steps: 600
+  plot_interval: 1
+capsule:
+  simple:         # 胃的简单椭圆模型 胶囊起始位置(测试参数)
+    x: 0.0
+    y: 0.0
+  v_active: 0.1   # 活动推进速度 （碳酸钙主动推进）
+  D_trans: 0.01   # 转移扩散系数 （平动）
+  D_rot: 0.01     # 转移扩散系数 （旋转）
+  v_grav: 0.005   # 重力导致的沉降速度
+  injection:
+    spread: 0.1   # 注入位置扩散范围
+    offset: 0.3   # 注入位置偏移（相对于当前胶囊位置）
+    v_init: 0.005   # 注入时的推进速度
+
+stomach:
+  pylorus_line:
+    point: [-4.8, -2.9]   # 基准点
+    normal: [-2.0, -1.0]    # 法向量  (指向胃外）
+  cardia_line:
+    point: [0.3, 3.2]   # 基准点
+    normal: [-1.5, 1.0]    # 法向量 （指向胃外）
+
+
+simple_ellipse:   # 胃的简单椭圆模型(测试参数)
+  a: 10.0
+  b: 6.0
+  exit_x: 9.5
+
+draw: 
+  image_path: "stomach.png"
+  parse_switch: True
+  x_range: [-12, 14]
+  y_range: [-8, 8]
+  return_contour: False
+  temp_path: "./tmp"   
+  video_path: "./video"  
+  video_name: "result.mp4"
+  fps: 30 
