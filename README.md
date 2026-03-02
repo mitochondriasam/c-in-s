@@ -1,4 +1,5 @@
 # Capsule-in-Stomach Simulation
+### A practice of state machiness
 
 本项目使用 Python 构建了一个二维物理模拟模型，用于模拟微型胶囊在胃内的运动、碰壁粘附以及经幽门排出的全过程，并支持将粒子运动过程自动生成视频。
 
